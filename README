@@ -1,0 +1,76 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=4532
+
+
+
+
+tweetvim is twitter client.
+===================
+
+Latest Version: https://github.com/basyura/TweetVim
+
+Requirement:
+------------------
+
+(*) optional
+
+cURL
+http://curl.haxx.se/
+
+twibill.vim
+https://github.com/basyura/twibill.vim
+
+open-browser.vim
+https://github.com/tyru/open-browser.vim)
+
+unite-outline (*)
+https://github.com/h1mesuke/unite-outline
+
+bitly.vim (*)
+https://github.com/basyura/bitly.vim
+
+unite.vim (*)
+https://github.com/Shougo/unite.vim
+
+vimproc (*)
+https://github.com/Shougo/vimproc
+
+favstar-vim (*)
+https://github.com/mattn/favstar-vim
+
+
+Related plugin:
+--------------------
+
+neco-tweetvim
+https://github.com/yomi322/neco-tweetvim
+
+    plugin for neocomplcache.
+    you can complete screen name and hash tag in tweetvim_say buffer.
+
+unite-tweetvim
+https://github.com/yomi322/unite-tweetvim
+
+    plugin for unite.vim
+
+STARTUP
+--------------
+
+Thank you for using tweetvim.
+First, you must verify account.
+
+    :TweetVimHomeTimeline<CR>
+
+If you are not verified, browser is launched by openbrowser.vim and display the number (pin).
+Then, input the number (pin) to the vim's command line.
+
+    Enter Twitter OAuth PIN: your number (pin)
+
+tweetvim save token to g:tweetvim_config_dir (default : ~/.tweetvim).
+
+If you want to use tweetvim conviniently, writes some key mappings in .vimrc
+like this.
+
+    nnoremap <silent> s  :<C-u>TweetVimSay<CR>
+    nnoremap <silent> t  :TweetVimHomeTimeline<CR>
+    nnoremap <silent> tm :TweetVimMentions<CR>
+
